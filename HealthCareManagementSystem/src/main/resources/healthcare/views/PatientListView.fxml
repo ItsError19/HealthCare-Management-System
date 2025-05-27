@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" 
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.healthcare.controllers.PatientListController"
+      spacing="10" 
+      style="-fx-padding: 20;">
+
+    <Label text="Patient Records" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+    
+    <TableView fx:id="patientTable" style="-fx-font-size: 14;">
+        <columns>
+            <!-- ID Column -->
+            <TableColumn text="ID" fx:id="colId" prefWidth="50" 
+                         style="-fx-alignment: CENTER;"/>
+            
+            <!-- Name Column -->
+            <TableColumn text="Full Name" fx:id="colName" prefWidth="180"/>
+            
+            <!-- Age Column -->
+            <TableColumn text="Age" fx:id="colAge" prefWidth="60" 
+                         style="-fx-alignment: CENTER;"/>
+            
+            <!-- Gender Column -->
+            <TableColumn text="Gender" fx:id="colGender" prefWidth="80" 
+                         style="-fx-alignment: CENTER;"/>
+            
+            <!-- Contact Column -->
+            <TableColumn text="Contact" fx:id="colContact" prefWidth="120"/>
+            
+            <!-- Address Column (Hidden by default) -->
+            <TableColumn text="Address" fx:id="colAddress" prefWidth="0" 
+                         visible="false"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Refresh" onAction="#loadPatients" 
+                style="-fx-font-weight: bold; -fx-padding: 5 15 5 15;"/>
+        <Button text="Add New Patient" 
+                onAction="#loadPatientForm" 
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 5 15 5 15;"/>
+    </HBox>
+</VBox>

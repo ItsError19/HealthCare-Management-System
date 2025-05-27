@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      alignment="CENTER" spacing="10" fx:controller="com.healthcare.controllers.LoginController">
+    
+    <Label text="Healthcare System Login" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+    
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="Username:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="usernameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        
+        <Label text="Password:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="passwordField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <Button text="Login" onAction="#handleLogin"/>
+    <Label fx:id="errorLabel" style="-fx-text-fill: red;"/>
+</VBox>

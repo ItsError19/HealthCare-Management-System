@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<GridPane xmlns="http://javafx.com/javafx/8" 
+          xmlns:fx="http://javafx.com/fxml/1"
+          hgap="10" vgap="10" 
+          alignment="CENTER">
+    
+    <!-- Add this line above to bind the "fx" namespace -->
+    
+    <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="Age:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="ageField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Gender:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="genderCombo" GridPane.rowIndex="2" GridPane.columnIndex="1">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Male" />
+                <String fx:value="Female" />
+                <String fx:value="Other" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Label text="Contact:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="contactField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label text="Address:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextArea fx:id="addressArea" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Button text="Save" onAction="#savePatient" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+</GridPane>

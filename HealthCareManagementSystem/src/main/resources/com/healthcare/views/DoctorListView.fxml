@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.healthcare.controllers.DoctorListController"
+      spacing="15" style="-fx-padding: 20;">
+
+    <Label text="Doctor Management" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+    
+    <HBox spacing="10" style="-fx-padding: 0 0 10 0;">
+        <Button fx:id="refreshButton" text="Refresh" style="-fx-font-weight: bold;"/>
+        <Button fx:id="addButton" text="Add Doctor" 
+                style="-fx-font-weight: bold; -fx-background-color: #2ecc71; -fx-text-fill: white;"/>
+        <Button fx:id="editButton" text="Edit Doctor" 
+                style="-fx-font-weight: bold; -fx-background-color: #3498db; -fx-text-fill: white;"/>
+        <Button fx:id="deleteButton" text="Delete Doctor" 
+                style="-fx-font-weight: bold; -fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+    </HBox>
+    
+    <TableView fx:id="doctorTable" style="-fx-font-size: 14;">
+        <columns>
+            <TableColumn text="ID" fx:id="colId" prefWidth="50" sortable="true"/>
+            <TableColumn text="Name" fx:id="colName" prefWidth="200" sortable="true"/>
+            <TableColumn text="Specialization" fx:id="colSpecialization" prefWidth="250" sortable="true"/>
+            <TableColumn text="Contact" fx:id="colContact" prefWidth="150" sortable="true"/>
+        </columns>
+    </TableView>
+</VBox>

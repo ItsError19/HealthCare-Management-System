@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.healthcare.controllers.DashboardController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Exit" />
+            </Menu>
+            <Menu text="Patients">
+                <MenuItem text="Add Patient" onAction="#loadPatientForm" />
+                <MenuItem text="View Patients" onAction="#loadPatientList" />
+            </Menu>
+            <Menu text="Doctors">
+                <MenuItem text="Add Doctor" onAction="#loadDoctorForm" />
+                <MenuItem text="View Doctors" onAction="#loadDoctorList" />
+            </Menu>
+            <Menu text="Appointments">
+                <MenuItem text="Book Appointment" onAction="#loadAppointmentForm" />
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <StackPane fx:id="contentArea" />
+    </center>
+</BorderPane>
